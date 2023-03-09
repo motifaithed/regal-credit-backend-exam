@@ -73,7 +73,7 @@ if one of the requirements above wasn't met it will return a status 400 with obj
 ## http://localhost:3002/color-animal/edit
 
 1. Send request to the endpoint above to update an object or array of object
-   using "uuid" as unique element. you can pass an array or an object as well.
+   using "uuid" as unique element. You can send a request body in two form, one array for multiple edit, or just an object for single edit.
 
 Ex. For multiple edit
 
