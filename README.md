@@ -28,7 +28,7 @@
 ### METHOD: GET
 ## http://localhost:3002/color-animal/random
 
-1. Send request to the endpoint above to get a list of random generated colors and animals object. By default it will show you an array containing two objects. If there is only 1 record on the backend, it will only show you an array with a single object
+1. Send request to the endpoint above to get a random tuple of colors and animals.
 
 2. If there are no existing data on the backend, it will send an object
 
@@ -37,7 +37,7 @@
 ### METHOD: POST 
 ## http://localhost:3002/color-animal/add
 
-1. Send request to the endpoint above to add objects with animal and color property to the backend data. You can send a request body in two form, one array for multiple addition, or just an object for single addition.
+1. Send request to the endpoint above to add a list of tuples of colors and animals to the  backend data. You can send a request body in two form, one array for multiple addition, or just an object for single addition.
 
 Ex. For multiple addition
 

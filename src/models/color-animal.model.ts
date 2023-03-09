@@ -156,17 +156,11 @@ class ColorAnimal implements IColorAnimal {
     const low = 0;
     const high = existingColorsAnimals.length - 1;
 
-    const colorAnimal1 = Math.floor(Math.random() * (high - low + 1)) + low;
-    const colorAnimal2 = Math.floor(Math.random() * (high - low - 1)) + low;
+    const randomAnimalIndex = Math.floor(Math.random() * (high - low + 1)) + low;
     const result: ColorAnimalObj[] = [];
-    if (existingColorsAnimals.length === 1) {
-      result.push(existingColorsAnimals[0]);
-    } else if (existingColorsAnimals.length > 1) {
-      result.push(
-        existingColorsAnimals[colorAnimal1],
-        existingColorsAnimals[colorAnimal2]
-      );
-    }
+    if (existingColorsAnimals.length >= 1) {
+      result.push(existingColorsAnimals[randomAnimalIndex]);
+    } 
     return result;
   }
 }
