@@ -26,15 +26,15 @@ const editColorsAndAnimals: RequestHandler = (req, res, next) => {
     next(error);
   }
 };
-const deleteColorsAndAnimals : RequestHandler = (req, res, next) => {
-    try{
-        const colorAnimal = new ColorAnimal();
-        colorAnimal.delete(req.body.uuids);
-        res.status(200).send({colorsAndAnimalsDeleted: true})
-    }catch(error){
-        next(error);
-    }
-}
+const deleteColorsAndAnimals: RequestHandler = (req, res, next) => {
+  try {
+    const colorAnimal = new ColorAnimal();
+    colorAnimal.delete(req.body.uuids);
+    res.status(200).send({ colorsAndAnimalsDeleted: true });
+  } catch (error) {
+    next(error);
+  }
+};
 const getAllColorsAndAnimals: RequestHandler = (_, res, next) => {
   try {
     const colorAnimal = new ColorAnimal();
@@ -49,12 +49,16 @@ const getAllColorsAndAnimals: RequestHandler = (_, res, next) => {
 };
 
 const getRandomColorsAndAnimals: RequestHandler = (_, res, next) => {
-  const colorAnimal = new ColorAnimal();
-  const randomColorAnimals = colorAnimal.getRandom();
-  if (randomColorAnimals.length >= 1) {
-    return res.status(200).send(randomColorAnimals);
+  try {
+    const colorAnimal = new ColorAnimal();
+    const randomColorAnimals = colorAnimal.getRandom();
+    if (randomColorAnimals.length >= 1) {
+      return res.status(200).send(randomColorAnimals);
+    }
+    res.status(200).send({ colorsAndAnimals: 0 });
+  } catch (error) {
+    next(error);
   }
-  res.status(200).send({ colorsAndAnimals: 0 });
 };
 
 export default {
@@ -62,5 +66,5 @@ export default {
   getAllColorsAndAnimals,
   getRandomColorsAndAnimals,
   editColorsAndAnimals,
-  deleteColorsAndAnimals
+  deleteColorsAndAnimals,
 };
