@@ -69,7 +69,7 @@ if one of the requirements above wasn't met it will return a status 400 with obj
 
     {"requestIsValid": false}
 
-### METHOD: POST
+### METHOD: PUT
 ## http://localhost:3002/color-animal/edit
 
 1. Send request to the endpoint above to update an object or array of object

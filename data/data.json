@@ -1,23 +1,13 @@
 [
   {
-    "uuid": "431207e5-355f-441a-9659-3675018ae2bd",
-    "animal": "Turtle",
-    "color": "Green"
-  },
-  {
-    "uuid": "63d087aa-c0e9-4c95-bc83-a7c6cad9b422",
-    "animal": "Pig",
-    "color": "Red"
-  },
-  {
     "uuid": "2d32149e-af59-4379-a34b-00c06ea4bf3c",
     "color": "Pink",
-    "animal": "Pig"
+    "animal": "Panther"
   },
   {
     "uuid": "68a56eae-5b91-4f42-9a04-c9be10db7d7d",
     "color": "Black",
-    "animal": "Carabao"
+    "animal": "Rino"
   },
   {
     "uuid": "6d3300a3-952e-40f2-879c-39690e261764",

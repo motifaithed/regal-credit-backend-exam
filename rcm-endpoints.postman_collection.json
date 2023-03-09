@@ -53,7 +53,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n{\r\n        \"animal\": \"Pig\",\r\n        \"color\": \"Pink\"\r\n    },\r\n    {\r\n        \"animal\": \"Carabao\",\r\n        \"color\": \"Black\"\r\n    }\r\n]\r\n    \r\n  ",
+					"raw": "[\r\n{\r\n        \"animal\": \"Dinasaur\",\r\n        \"color\": \"Gray\"\r\n    },\r\n    {\r\n        \"animal\": \"Monkey\",\r\n        \"color\": \"Brown\"\r\n    }\r\n]\r\n    \r\n  ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -78,11 +78,11 @@
 		{
 			"name": "edit colors and animals",
 			"request": {
-				"method": "POST",
+				"method": "PUT",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "[\r\n{\r\n        \"uuid\": \"431207e5-355f-441a-9659-3675018ae2bd\",\r\n        \"color\": \"Pink\",\r\n        \"animal\": \"Turtle\"\r\n},{\r\n        \"uuid\": \"63d087aa-c0e9-4c95-bc83-a7c6cad9b422\",\r\n        \"color\": \"Yellow\",\r\n        \"animal\": \"Pig\"\r\n}\r\n]\r\n \r\n    \r\n  ",
+					"raw": "[\r\n {\r\n    \"uuid\": \"2d32149e-af59-4379-a34b-00c06ea4bf3c\",\r\n    \"color\": \"Pink\",\r\n    \"animal\": \"Panther\"\r\n  },\r\n  {\r\n    \"uuid\": \"68a56eae-5b91-4f42-9a04-c9be10db7d7d\",\r\n    \"color\": \"Black\",\r\n    \"animal\": \"Rino\"\r\n  }\r\n  ]\r\n \r\n    \r\n  ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -111,7 +111,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"ids\": [\"13535321\"]\r\n}\r\n \r\n    \r\n  ",
+					"raw": "{\r\n    \"uuids\": [\"68a56eae-5b91-4f42-9a04-c9be10db7d7d\", \"6d3300a3-952e-40f2-879c-39690e261764\"]\r\n}\r\n \r\n    \r\n  ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -119,15 +119,14 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:3002/color-animal/delete",
+					"raw": "http://localhost:3002/color-animfsasdfdassfsdf",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3002",
 					"path": [
-						"color-animal",
-						"delete"
+						"color-animfsasdfdassfsdf"
 					]
 				}
 			},
