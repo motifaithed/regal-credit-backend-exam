@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "a830b43b-48b8-4f5c-942b-be1ed4e4a948",
+		"name": "rcm-endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13442267"
+	},
+	"item": [
+		{
+			"name": "get all colors and animals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/color-animal/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"color-animal",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get random colors and animals",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3002/color-animal/random",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"color-animal",
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "new color and animal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n        \"animal\": \"Pig\",\r\n        \"color\": \"Pink\"\r\n    },\r\n    {\r\n        \"animal\": \"Carabao\",\r\n        \"color\": \"Black\"\r\n    }\r\n]\r\n    \r\n  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/color-animal/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"color-animal",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit colors and animals",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n{\r\n        \"uuid\": \"431207e5-355f-441a-9659-3675018ae2bd\",\r\n        \"color\": \"Pink\",\r\n        \"animal\": \"Turtle\"\r\n},{\r\n        \"uuid\": \"63d087aa-c0e9-4c95-bc83-a7c6cad9b422\",\r\n        \"color\": \"Yellow\",\r\n        \"animal\": \"Pig\"\r\n}\r\n]\r\n \r\n    \r\n  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/color-animal/edit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"color-animal",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete colors and animals",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ids\": [\"13535321\"]\r\n}\r\n \r\n    \r\n  ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3002/color-animal/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"color-animal",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
