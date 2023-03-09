@@ -188,16 +188,20 @@ that will possibly occur on the backend will send back a status 500 and generalS
             import { RequestHandler } from "express";
 
             const deleteColor: RequestHandler = async (req, res, next) => {
+                try{
+                const deleteColor = await findOneAndDelete({color: req.body.color});
 
-                const deleteColor = await findOneAndDelete({color: "Red"});
                 //return code here
+                }catch(error){
+                    next(error)
+                }
             } 
             export default {
                 deleteColor
             }
             
 
-    Alternatively, on a SQL database considering everything was already setup and you have a table colors with column color_name, you can run the following code.
+    Alternatively, on an SQL database considering everything was already setup and you have a table colors with column color_name, you can run the following code.
 
         DELETE FROM colors WHERE color_name = "Red";
 
